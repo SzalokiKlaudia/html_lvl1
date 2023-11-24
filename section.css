@@ -4,161 +4,87 @@
     box-sizing: border-box;
 }
 
-.section2-description{
-    font-family: myfont-light;
-}
-
-.navigation-link{
-    font-family: myfont-bold;
-
-}
-
-.header, .nav-link-button {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 0.5rem;
-    width: 80%;;
-    
-}
-
 body{
     background-color: var(--bg-color);
     margin: 2rem 2rem 2rem 2rem;
 }
 
+#main-logo{
+    max-width: 10vw;
+}
+
 .container {
+    display: grid;
+    justify-content: center;
     background-color: var(--main-bg-color);
     opacity: 0.9;
     border-radius: 0.5rem;
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     margin: auto;
     overflow: auto; 
-    padding: 2rem 10rem 2rem 10rem;
+    /*padding: 2rem 10rem 2rem 10rem;*/
 }
 
-@media only screan and (max-width: 400px) {
-    [class*="col-"]{
-    width: 100%;
-}
-}
 .header{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 90%;
-    align-items: center;
     font-size: 17px;
 }
 
-.section-container{
+.logo-container {
     display: grid;
-    grid-template-rows: auto auto auto;
-    justify-content: center;
+    justify-content: left;
 }
 
-.header nav{
+.navigation-bar{
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
-    
 }
 
-
-.section1-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 1rem;
+.navigation-link{
+    display: block;
+    font-family: myfont-bold;
 }
 
-.section2-image {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    border-radius: 1rem;
-
-}
-
-#main-logo{
-    max-width: 10vw;
-    padding-bottom: 25px;
+.nav-link-button {
     display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
     align-items: center;
-   
-}
-
-.logo-container{
-    display: grid;
-    justify-content: right;
-  
+    gap: 0.5rem;
 }
 
 .button {
-    width: 100%;
+    width: 10rem;
+    height: 2.3rem;
     font-family: myfont-bold;
-    width: 150px;
     display: block;
     text-align: center;
-    
+    text-decoration: none;
+    border-radius: 1.5rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .light-button {
     background-color: transparent;
     border:  2px solid #737885;
-    text-decoration: none;
-    border-radius: 1.5rem;
-    font-family: myfont-bold;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    
-    
-   
 }
 
 .dark-button {
     background-color: var(--button-bg-color);
-    border-radius: 1.5rem;
-    text-decoration: none;
-    font-family: myfont-bold;
     color: white;
-    padding-top: 8px;
-    padding-bottom: 8px;
-  
-
 }
 
-.section2 {
+.section-container{
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 1rem;
-    padding-bottom: 10px;
-    height: 150px;
-    width: 100%;
-    justify-content: space-between;
-    
-}
-
-.donut1 {
-    background-image: url(images/donut2.jpg);
-    width: 280px;
-}
-
-.donut2 {
-    background-image: url(images/donut3.jpg);
-    width: 280px;
-}
-
-.donut3 {
-    background-image: url(images/donut7.jpg);
-    width: 280px;
-}
-
-.image-box{
-    background-size: cover;
-    background-position: center;
-    border-radius: 1rem;
+    grid-template-rows: auto auto auto;
 }
 
 .section1-image-box-description {
@@ -169,44 +95,13 @@ body{
     font-weight: 950;
     text-shadow: 1px 1px 0 black;
     padding-left: 1rem;;
-
-    
 }
-
-.section3{
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-top: 2.5rem;
-    width: 100%;
-    justify-content: normal;
-    gap: 1rem;
-    
-    
-}
-
-.section2-description-box{
-    
-    width: 430px;
-}
-
-.section2-description {
-    margin-bottom: 1rem;
-    font-size: smaller;
-    font-weight: bold;
-}
-
-.section2-image{
-    width: 420px;
-}
-
 
 .section1-title, section2-title {
     text-align: center;
     margin-bottom: 1px;
     margin-top: 0;
     text-shadow: 0.5px 0.5px 0 black;
-
-
 }
 
 .section1-description{
@@ -214,4 +109,69 @@ body{
     margin-top: 0;
     margin-bottom: 3.5rem;
 
+}
+
+.section1-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.section2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 150px;
+    justify-content: center;
+}
+
+.section3-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 1rem;
+
+}
+
+.section2-description {
+    margin-bottom: 1rem;
+    font-size: smaller;
+    font-weight: bold;
+    font-family: myfont-light;
+}
+
+.section2-description-box{
+    width: 430px;
+}
+
+.section2-image{
+    width: 420px;
+}
+
+.section3{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 2.5rem;
+    justify-content: normal;
+    gap: 1rem;
+}
+
+.image-box{
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    width: 98%;
+    margin: auto;
+}
+
+.donut1 {
+    background-image: url(images/donut2.jpg);
+}
+
+.donut2 {
+    background-image: url(images/donut3.jpg);
+}
+
+.donut3 {
+    background-image: url(images/donut7.jpg);
 }

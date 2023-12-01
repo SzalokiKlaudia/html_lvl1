@@ -157,6 +157,7 @@ body{
     margin-bottom: 1rem;
     justify-content: normal;
     gap: 1rem;
+    
 }
 
 .image-box{
@@ -186,6 +187,8 @@ body{
 @media screen and (max-width: 450px) {
     body{
         margin: 0;
+        overflow: hidden;
+
     }
     .container{
         height: 100vh;
@@ -278,6 +281,8 @@ body{
     @media screen and (min-width: 450px) and (max-width: 630px) {
         body{
             margin: 0;
+            overflow: hidden;
+
         }
 
         .container{
@@ -405,31 +410,43 @@ body{
         width: 80vw;
         grid-area: h;
         grid-template-rows:  1fr;
-        font-size: 30px;
+        font-size: 2.5rem;
+        padding: 3rem;
     }
     
     .button {
+        width: 25rem;
         padding-top: 1rem;
         padding-bottom: 3.5rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-radius: 2rem;
+    }
+    .nav-link-button{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
     }
 
     .section1{
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
+
 
     .section2 {
         height: auto;
+        padding: 3rem;
     }
 
     .section2-description-box{
-        font-size: 1.5rem;
+        font-size: 2.5rem;
+        width: 100%;
     }
 
     .image-box {
         width: 25vw;
-        height: 15rem;
+        height: 25rem;
     }
 
     .section1-image-box-description {
@@ -438,10 +455,21 @@ body{
     }
 
     #dark-button {
-        width: 15rem;
+        width: 25rem;
     }
 
     .dark-button-wide{
         width: 100%;
+    }
+
+    .section3-image{
+        max-width: 35vw;
+        height: 35vh;
+        
+    }
+
+    .section3{
+        padding: 3rem;
+        gap: 2rem;
     }
 }

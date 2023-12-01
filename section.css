@@ -24,6 +24,7 @@ body{
     height: 95vh;
     margin: auto;
     overflow: auto; 
+    padding: 2rem;
     /*padding: 2rem 10rem 2rem 10rem;*/
 }
 
@@ -187,6 +188,7 @@ body{
         margin: 0;
     }
     .container{
+        height: 100vh;
         display: grid;
         position: relative;
         grid-template-areas:
@@ -262,15 +264,24 @@ body{
         }
 
     #dark-button{
-        position: absolute;
-        right: 5rem;
+        margin: 20px;
+        
         }     
+
+    .dark-button {
+         margin: 0 auto;
+        }
     }
 
 
 
-    @media screen and (min-width: 450px) and (max-width: 768px) {
+    @media screen and (min-width: 450px) and (max-width: 630px) {
+        body{
+            margin: 0;
+        }
+
         .container{
+            height: 100vh;
             padding-top: 1rem;
             display: grid;
             position: relative;
@@ -299,7 +310,7 @@ body{
             left: 0;
             transform: translate(-50%, -50%);
             top: 4rem;
-            width: 20rem;
+            width: 25rem;
             font-size: 15px;
         }
     
@@ -310,6 +321,7 @@ body{
             position: absolute;
             top: 1rem;
             transform: translate(-50%, -50%);
+            padding-top: 1rem;
         }
     
         .section3{
@@ -338,7 +350,7 @@ body{
         }
     
         .section2-description-box{
-            width: 20rem;
+            width: 25rem;
             display: block;
             text-align: center;
             margin: auto;
@@ -355,6 +367,44 @@ body{
     }
 
 /* tablet */
-@media screen and (min-width: 768px) and(max-width: 1023px) {
+@media screen and (min-width: 630px) and (max-width: 1023px) {
+    body{
+        margin: 0;
+        overflow: hidden;
 
+    }
+
+    .container{
+        height: 100vh;
+        padding: 2rem;
+    }
+
+    
+}
+
+/* large screen */
+@media screen and (min-width: 1650px) and (max-width: 3300px) {
+    
+
+    .container{
+        margin: 0 auto;
+        width: 80vw;
+        padding: 5rem;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-areas:
+        "h h h h "
+        "s1 s1 s1 s1"
+        "s2 s2 s2 s2"
+        "s3 s3 s3 s3"; 
+    }
+
+    .header{
+        width: 80vw;
+        padding: 3rem;
+        grid-area: h;
+        grid-template-rows:  1fr;
+        font-size: 30px;
+    }
+    
 }

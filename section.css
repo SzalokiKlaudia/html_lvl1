@@ -7,6 +7,7 @@
 body{
     background-color: var(--bg-color);
     margin: 2rem 2rem 2rem 2rem;
+    overflow: hidden;
 }
 
 #main-logo{
@@ -152,6 +153,7 @@ body{
     display: grid;
     grid-template-columns: auto auto;
     margin-top: 2.5rem;
+    margin-bottom: 1rem;
     justify-content: normal;
     gap: 1rem;
 }
@@ -180,7 +182,10 @@ body{
 
 
 /* mobile device */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 450px) {
+    body{
+        margin: 0;
+    }
     .container{
         display: grid;
         position: relative;
@@ -188,7 +193,7 @@ body{
         "h h h h "
         "s1 s1 s1 s1"
         "s2 s2 s2 s2"
-        "s3 s3 s3 s3";
+        "s3 s3 s3 s3"; 
     
         }
 
@@ -262,3 +267,94 @@ body{
         }     
     }
 
+
+
+    @media screen and (min-width: 450px) and (max-width: 768px) {
+        .container{
+            padding-top: 1rem;
+            display: grid;
+            position: relative;
+            grid-template-areas:
+            "h h h h "
+            "s1 s1 s1 s1"
+            "s2 s2 s2 s2"
+            "s3 s3 s3 s3"; 
+        }
+    
+        .header{
+            position: absolute;
+            left: 50%;
+            top: 3rem;
+            transform: translate(-50%, -50%);
+            width: 20rem;
+            grid-area: h;
+            grid-template-columns: 1fr;
+            font-size: 15px;
+        }
+        
+        .section1{
+            display: grid;
+            grid-area: s1;
+            position: absolute;
+            left: 0;
+            transform: translate(-50%, -50%);
+            top: 4rem;
+            width: 20rem;
+            font-size: 15px;
+        }
+    
+        .section2{
+            grid-area: s2;
+            grid-template-columns: 1fr 1fr; 
+            gap: 1rem;
+            position: absolute;
+            top: 1rem;
+            transform: translate(-50%, -50%);
+        }
+    
+        .section3{
+            grid-area: s3;
+            grid-template-columns: 1fr;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 21rem;
+            font-size: 15px;
+            display: grid;
+        }
+    
+        .image-box{
+            width: 10rem; 
+            margin-bottom: 1rem;   
+        }
+    
+        .section3-image-box{
+            margin: auto;
+            width: 15rem;    
+        }
+    
+        .logo-container{
+            display: grid;
+            justify-content: center;
+        }
+    
+        .section2-description-box{
+            width: 20rem;
+            display: block;
+            text-align: center;
+            margin: auto;
+            position: relative; 
+        }
+    
+        #dark-button{
+            margin: 20px;
+        }
+
+        .dark-button {
+            margin: 0 auto;
+        }
+    }
+
+/* tablet */
+@media screen and (min-width: 768px) and(max-width: 1023px) {
+
+}

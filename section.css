@@ -176,36 +176,89 @@ body{
     background-image: url(images/donut7.jpg);
 }
 
-@media screen and (max-width: 720px) {
-    .button {
-        width: 9rem;
-        font-size: 0.8rem;
+
+
+
+/* mobile device */
+@media screen and (max-width: 767px) {
+    .container{
+        display: grid;
+        position: relative;
+        grid-template-areas:
+        "h h h h "
+        "s1 s1 s1 s1"
+        "s2 s2 s2 s2"
+        "s3 s3 s3 s3";
+    
+        }
+
+    .header{
+        position: absolute;
+        left: 50%;
+        top: 3rem;
+        transform: translate(-50%, -50%);
+        width: 20rem;
+        grid-area: h;
+        grid-template-columns: 1fr;
+        font-size: 15px;
+        }
+    
+    .section1{
+        display: grid;
+        grid-area: s1;
+        position: absolute;
+        left: 0;
+        transform: translate(-50%, -50%);
+        top: 4rem;
+        width: 20rem;
+        font-size: 15px;
+        }
+
+    .section2{
+        grid-area: s2;
+        grid-template-columns: 1fr; 
+        position: absolute;
+        top: 1rem;
+        transform: translate(-50%, -50%);
+        }
+
+    .section3{
+        grid-area: s3;
+        grid-template-columns: 1fr;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 30rem;
+        font-size: 15px;
+        display: grid;
+        margin-top: 2rem;
+        }
+
+    .image-box{
+        width: 10rem; 
+        margin-bottom: 1rem;   
+        }
+
+    .section3-image-box{
+        margin: auto;
+        width: 14rem;    
+        }
+
+    .logo-container{
+        display: grid;
+        justify-content: center;
+        }
+
+    .section2-description-box{
+        width: 20rem;
+        display: block;
+        text-align: center;
+        margin: auto;
+        position: relative; 
+        }
+
+    #dark-button{
+        position: absolute;
+        right: 5rem;
+        }     
     }
 
-    .navigation-link {
-        font-size: 0.8rem;
-    }
-
-    .section-container{
-        font-size: 0.8rem;
-    }
-}
-
-@media screen and (max-width: 630px) {
-    .button {
-        width: 6rem;
-        font-size: 0.6rem;
-    }
-
-    .navigation-link {
-        font-size: 0.6rem;
-    }
-
-    .section-container{
-        font-size: 0.6rem;
-    }
-
-    .section3 {
-        grid-template-columns: auto 400px;
-    }
-}
